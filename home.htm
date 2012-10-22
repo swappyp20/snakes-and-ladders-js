@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Snakes and Ladders</title>
+    <link rel="stylesheet" href="home.css" type="text/css" />
+    <script src="modernizr-2.5.3.js"></script>
+    <script src="jquery-1.7.1.js"></script>
+    <script src="jcanvas-5.1.js"></script>
+  </head>
+  <body>
+ 	<div id="main">
+ 		<div id="content">
+ 			<canvas id="gameCanvas" width="500" height="375"></canvas>
+ 			<script>
+ 				var gameCanvas = document.getElementById("gameCanvas");
+ 				var context = gameCanvas.getContext("2d");
+ 				for (var x = 0.5; x < 500; x += 10) {
+ 					context.moveTo(x, 0);
+ 					context.lineTo(x, 375);
+ 				}
+ 				
+ 				for (var y = 0.5; y < 375; y += 10) {
+ 					context.moveTo(0, y);
+ 					context.lineTo(500, y);
+ 				}
+ 				
+ 				context.strokeStyle = "#eee";
+				context.stroke();
+				
+				
+ 			</script>
+ 		</div>
+ 	</div>
+  </body>
+</html>

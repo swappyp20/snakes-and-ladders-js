@@ -1,0 +1,24 @@
+@font-face {
+	font-family: "Chunkfive";
+    src: url('fonts/Chunkfive.otf');
+    font-weight: 900;
+    font-style: "normal"
+}
+
+body {
+	background-color: #2A4480;
+}
+
+#title {
+	font-family : "Chunkfive", serif;
+	font-size: 40px;
+	color: #FFFFFF; 
+}
+
+#content {
+	background-image: url('img/board.png');
+	width: 800px;
+	height: 600px;
+    margin: 0 auto;
+    padding: 5px;
+}

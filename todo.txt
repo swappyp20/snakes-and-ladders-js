@@ -1,0 +1,13 @@
+TO DO
+- use jCanvas layers(?) or Kinetic.js(?) to write data to different parts of the screen
+	- die
+	- human name, score
+	- computer name, score
+	- current turn
+- Run the game once completely in the console, just to make sure the game logic works (it should be tight, until the players reach 100)
+
+DONE: 
+- Figured out how to do fonts
+- Done some basic CSSing
+- The game loads the board in the background of the <div>
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8" />
+    <title>Snakes and Ladders</title>
+    
+    <!-- 
+    	Probably might want to use head.js here
+    <link rel="stylesheet" href="html5reset-1.6.1.css" />
+    -->
+    <link rel="stylesheet" href="default.css" />
+
+	<script src="lib/modernizr-2.5.3.js"></script>
+    <script src="lib/jquery-1.7.1.js"></script>
+    <script src="lib/jcanvas-5.1.js"></script>
+    <script src="game.js"></script>
+
+	<!--
+	<script src="lib/head.js"></script>
+	<script>
+		// Still has a page load delay, actually seems slower
+		head.js("lib/modernizr-2.5.3.js").js("lib/jquery-1.7.1.js").js("lib/jcanvas-5.1.js").js("game2.js");
+	</script>
+	-->
+  </head>
+  <body>
+ 	<div id="main">
+ 		<header>
+			<h1 id="title">Snakes and Ladders</h1>
+ 			<?php 
+ 				
+ 			?>
+ 		</header>
+ 		<div id="content">
+ 			
+ 			<canvas id="gameCanvas" width="800" height="600"></canvas>
+ 			<script>
+ 				window.onload = function () {
+ 					var g = new game();
+ 					g.init(10,10,"Hassan");
+ 				}
+ 			</script>
+ 			<!--
+			<script>
+					//head.ready(function() {
+					//var g = new game();
+					//g.init(10,10,"Hassan");
+					//g.start();
+					//$("canvas").drawImage({
+					//	source: "img/board.png",
+					//	fromCenter: false
+					//});
+					
+					function writeMessage(canvas, message){
+						var context = canvas.getContext('2d');
+						context.clearRect(0, 0, canvas.width, canvas.height);
+						context.font = '18pt Chunkfive';
+						context.fillStyle = 'white';
+						context.fillText(message, 10, 25);
+					}
+					 
+					function getMousePos(canvas, evt){
+						// get canvas position
+						var obj = canvas;
+						var top = 0;
+						var left = 0;
+						while (obj && obj.tagName != 'BODY') {
+							top += obj.offsetTop;
+							left += obj.offsetLeft;
+							obj = obj.offsetParent;
+						}
+					 
+						// return relative mouse position
+						var mouseX = evt.clientX - left + window.pageXOffset;
+						var mouseY = evt.clientY - top + window.pageYOffset;
+						return {x: mouseX, y: mouseY};
+					}
+					
+					var canvas = document.getElementById('gameCanvas');
+					var context = canvas.getContext('2d');
+					drawBoard();
+					
+					$("#gameCanvas").mousemove(function (evt) {
+						var mousePos = getMousePos(canvas, evt);
+						// Monitor for hover over die
+						if(mousePos.x > 560 && mousePos.x < 690){
+ 							if(mousePos.y > 360 && mousePos.y < 540){
+ 								
+ 								console.log("X: " + mousePos.x + " Y: " + mousePos.y);
+ 							}
+ 						}
+						var message = "Mouse position: " + mousePos.x + "," + mousePos.y;
+						writeMessage(canvas, message);
+					});
+					
+					// Draws board
+					function drawBoard() {
+						// Draws infobar
+						$("#gameCanvas").drawImage({
+							source: "img/infoBar.png",
+							x: 550, y: 50,
+							fromCenter: false
+						});
+						
+						$("#gameCanvas").drawImage({
+							source: "img/die.png",
+							x: 560, y: 360,
+							fromCenter: false
+						});
+						
+						$("#gameCanvas").saveCanvas();
+					}
+				//});
+			</script>
+ 			<script>
+ 				// Run Modernizr tests for local storage and canvas support
+ 				if (Modernizr.localstorage) {
+				} else {
+					alert("Local storage not detected!");
+				}
+				if (Modernizr.canvas) {
+				} else {
+					alert("Canvas support not detected!");
+				}
+ 			</script>
+			-->
+ 		</div>
+ 		<footer">
+ 			<?php
+ 				
+ 			?>
+ 		</footer>
+ 	</div>
+  </body>
+</html>
